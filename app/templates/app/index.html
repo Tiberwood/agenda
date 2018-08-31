@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block body %}
+<div class="panel panel-default">
+	<div class="panel-body">
+    	<h3>Favor realice su reserva de Sala</h3>
+			{% if error_message %}
+            	<p><strong>{{ error_message }}</strong></p>
+            {% endif %}
+        	<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+            	{% csrf_token %}
+                <input type="hidden" name="album" value="{{ album }}">
+                 	{% include 'app/form_template.html' %}
+				<div class="form-group">
+                	<div class="col-sm-offset-2 col-sm-10">
+                    	<button type="submit" class="btn btn-success">Reserva</button>
+                    </div>
+                </div>
+			</form>
+	</div>
+</div>
+
+{% endblock %}

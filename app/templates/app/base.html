@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Reserva de salas{% endblock %}</title>
+     {% load staticfiles %} 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}"/> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+    	<div class="container-fluid">
+
+        	<!-- Header -->
+        	<div class="navbar-header">
+            	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+                	<span class="icon-bar"></span>
+            	</button>
+            	<a class="navbar-brand" href="{% url 'app:index' %}">Agenda</a>
+        	</div>
+    	</div>
+	</nav>
+{% block body %}
+{% endblock %}
+</body>
+</html>
